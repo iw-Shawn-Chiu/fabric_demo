@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 # 發生錯誤時執行終止指令
 set -e
 
