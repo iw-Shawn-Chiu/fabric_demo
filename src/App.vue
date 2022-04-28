@@ -1,7 +1,7 @@
 <template>
   <FabricDemo msg="Fabric Demo Page"/>
   <div>
-    <canvas id="canvas" width="300" height="200"></canvas>
+    <canvas id="c" width="300" height="200"></canvas>
   </div>
 </template>
 
@@ -15,7 +15,11 @@ export default {
     FabricDemo
   },
   mounted() {
-    var canvas = new fabric.Canvas('canvas');
+    var canvas = new fabric.Canvas('c', {
+      backgroundColor: 'rgb(100,100,200)',
+      selectionColor: 'blue',
+      selectionLineWidth: 2
+    });
     var rect = new fabric.Rect({
       top: 50,
       left: 100,
