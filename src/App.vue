@@ -7,7 +7,7 @@
 
 <script>
 import FabricDemo from './components/FabricDemo.vue'
-import fabric from 'fabric'
+import { fabric } from 'fabric'
 
 export default {
   name: 'App',
