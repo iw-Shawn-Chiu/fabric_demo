@@ -5,8 +5,8 @@
   </div>
   <div>
     <h2>Output</h2>
-    <img id="outimg" />
-    <button type="button" v-on:click="clickme">Click</button>
+    <img :src="outImage" />
+    <button type="button" @click="clickme">Click</button>
   </div>
 </template>
 
@@ -21,9 +21,13 @@ export default {
   components: {
     FabricDemo
   },
+  data: {
+    canvas: null,
+    outImage: ''
+  },
   methods: {
     clickme: function() {
-      window.alert('On Click!');
+      this.outImage = this.canvas.toDataURL(format: 'png');
     }
   },
   mounted() {
@@ -49,6 +53,8 @@ export default {
       });
       canvas.add(oImg);
     });
+
+    this.canvas = canvas;
   }
 }
 </script>
