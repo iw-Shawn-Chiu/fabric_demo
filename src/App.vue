@@ -21,14 +21,11 @@ export default {
       selectionColor: 'blue',
       selectionLineWidth: 2
     });
-    var rect = new fabric.Rect({
+    var text = new fabric.IText('Cat', {
       top: 50,
-      left: 100,
-      width: 100,
-      height: 70,
-      fill: 'red'
+      left: 100
     });
-    canvas.add(rect);
+    canvas.add(text);
 
     fabric.Image.fromURL(logo, (img) => {
       const oImg = img.set({
