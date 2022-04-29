@@ -18,7 +18,7 @@ export default {
   mounted() {
     var canvas = new fabric.Canvas('c', {
       backgroundColor: 'rgb(100,100,200)',
-      backgroundImage: './assets/cat.png'
+      backgroundImage: './assets/cat.png',
       selectionColor: 'blue',
       selectionLineWidth: 2
     });
