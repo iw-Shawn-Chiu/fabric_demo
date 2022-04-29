@@ -5,8 +5,8 @@
   </div>
   <div>
     <h2>Output</h2>
-    <img :src="outImage" />
     <button type="button" @click="clickme">Click</button>
+    <img :src="outImage" />
   </div>
 </template>
 
