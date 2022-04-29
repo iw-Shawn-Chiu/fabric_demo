@@ -5,7 +5,7 @@ module.exports = defineConfig({
     ? '/fabric_demo/'
     : '/',
   chainWebpack: config => {
-    config.plugin(html)
+    config.plugin('html')
       .tap(args => {
         args[0].minify = false;
         return args;
