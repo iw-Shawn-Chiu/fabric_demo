@@ -35,7 +35,7 @@ export default {
       this.outImage = this.canvas.toDataURL({format: 'png'});
     },
     addText: function() {
-      let text = new fabric.IText('New Text', {
+      let text = new fabric.IText('Text', {
         top: 50,
         left: 100
       });
