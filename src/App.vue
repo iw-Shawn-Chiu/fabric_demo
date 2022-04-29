@@ -1,7 +1,7 @@
 <template>
   <FabricDemo msg="Fabric Demo Page"/>
   <div>
-    <canvas id="c" width="600" height="400"></canvas>
+    <canvas id="c"></canvas>
   </div>
 </template>
 
@@ -18,9 +18,11 @@ export default {
   mounted() {
     var canvas = new fabric.Canvas('c', {
       backgroundColor: 'rgb(100,100,200)',
+      backgroundImage: './assets/cat.png'
       selectionColor: 'blue',
       selectionLineWidth: 2
     });
+    canvas.setDimensions({width: 800, height: 600});
     var text = new fabric.IText('Cat', {
       top: 50,
       left: 100
