@@ -1,7 +1,7 @@
 <template>
   <FabricDemo msg="Fabric Demo Page"/>
   <div>
-    <canvas id="c" width="300" height="200"></canvas>
+    <canvas id="c" width="600" height="400"></canvas>
   </div>
 </template>
 
@@ -28,6 +28,16 @@ export default {
       fill: 'red'
     });
     canvas.add(rect);
+
+    fabric.Image.fromURL('./assets/logo.png', (img) => {
+      const oImg = img.set({
+        left  : 10,
+        top   : 10,
+        width : 200,
+        height: 200
+      });
+      canvas.add(oImg);
+    });
   }
 }
 </script>
