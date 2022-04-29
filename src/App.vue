@@ -35,11 +35,11 @@ export default {
       this.outImage = this.canvas.toDataURL({format: 'png'});
     },
     addText: function() {
-      let text = new fabric.IText('Text', {
+      let text = new fabric.IText('New Text', {
         top: 50,
         left: 100
       });
-      this.canvas.add(text);
+      this.canvas.add(text).setActiveObject(text);
     }
   },
   mounted() {
