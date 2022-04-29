@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     clickme: function() {
-      this.outImage = this.canvas.toDataURL(format: 'png');
+      this.outImage = this.canvas.toDataURL({format: 'png'});
     }
   },
   mounted() {
