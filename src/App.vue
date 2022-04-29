@@ -1,11 +1,14 @@
 <template>
   <FabricDemo msg="Fabric Demo Page"/>
   <div>
+    <button type="button" @click="addText">Add Text</button>
+  </div>
+  <div>
     <canvas id="c"></canvas>
   </div>
   <div>
     <h2>Output</h2>
-    <button type="button" @click="clickme">Click</button>
+    <button id="click" type="button" @click="clickme">Click</button>
     <img :src="outImage" />
   </div>
 </template>
@@ -30,17 +33,24 @@ export default {
   methods: {
     clickme: function() {
       this.outImage = this.canvas.toDataURL({format: 'png'});
+    },
+    addText: () => {
+      let text = new fabric.IText('New Text', {
+        top: 50,
+        left: 100
+      });
+      this.canvas.add(text);
     }
   },
   mounted() {
-    var canvas = new fabric.Canvas('c', {
+    let canvas = new fabric.Canvas('c', {
       backgroundColor: 'rgb(100,100,200)',
       backgroundImage: cat,
       selectionColor: 'blue',
       selectionLineWidth: 2
     });
     canvas.setDimensions({width: 800, height: 600});
-    var text = new fabric.IText('Cat', {
+    let text = new fabric.IText('Cat', {
       top: 50,
       left: 100
     });
@@ -72,5 +82,9 @@ export default {
 }
 canvas {
   border:  1px dashed black;
+}
+#click {
+  display: block;
+  margin: 0 auto;
 }
 </style>
