@@ -8,6 +8,7 @@
 <script>
 import FabricDemo from './components/FabricDemo.vue'
 import { fabric } from 'fabric'
+import logo from './assets/logo.png'
 
 export default {
   name: 'App',
@@ -29,7 +30,7 @@ export default {
     });
     canvas.add(rect);
 
-    fabric.Image.fromURL('./assets/logo.png', (img) => {
+    fabric.Image.fromURL(logo, (img) => {
       const oImg = img.set({
         left  : 10,
         top   : 10,
