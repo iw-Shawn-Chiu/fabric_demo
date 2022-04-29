@@ -3,6 +3,10 @@
   <div>
     <canvas id="c"></canvas>
   </div>
+  <div>
+    <h2>Output</h2>
+    <img id="outimg" />
+    <button type="button" v-on:click="clickme">Click</button>
 </template>
 
 <script>
@@ -15,6 +19,11 @@ export default {
   name: 'App',
   components: {
     FabricDemo
+  },
+  methods: {
+    clickme: function() {
+      window.alert('On Click!');
+    }
   },
   mounted() {
     var canvas = new fabric.Canvas('c', {
