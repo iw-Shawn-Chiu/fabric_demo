@@ -37,7 +37,8 @@ export default {
     addText: function() {
       let text = new fabric.IText('New Text', {
         top: 50,
-        left: 100
+        left: 100,
+        editable: true
       });
       this.canvas.add(text).setActiveObject(text);
     }
