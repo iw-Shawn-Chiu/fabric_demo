@@ -21,9 +21,11 @@ export default {
   components: {
     FabricDemo
   },
-  data: {
-    canvas: null,
-    outImage: ''
+  data: () => {
+    return {
+      canvas: null,
+      outImage: ''
+    }
   },
   methods: {
     clickme: function() {
