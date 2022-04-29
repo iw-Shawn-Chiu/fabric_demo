@@ -35,12 +35,13 @@ export default {
       this.outImage = this.canvas.toDataURL({format: 'png'});
     },
     addText: function() {
-      let text = new fabric.IText('New Text2', {
+      let text = new fabric.IText('New Text3', {
         top: 50,
         left: 100,
         editable: true
       });
       this.canvas.add(text);
+      this.canvas.setActiveObject(text);
       this.canvas.renderAll();
     }
   },
