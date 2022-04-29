@@ -34,7 +34,7 @@ export default {
     clickme: function() {
       this.outImage = this.canvas.toDataURL({format: 'png'});
     },
-    addText: () => {
+    addText: function() {
       let text = new fabric.IText('New Text', {
         top: 50,
         left: 100
