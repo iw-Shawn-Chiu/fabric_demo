@@ -7,6 +7,7 @@
     <h2>Output</h2>
     <img id="outimg" />
     <button type="button" v-on:click="clickme">Click</button>
+  </div>
 </template>
 
 <script>
