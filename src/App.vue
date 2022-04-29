@@ -9,6 +9,7 @@
 import FabricDemo from './components/FabricDemo.vue'
 import { fabric } from 'fabric'
 import logo from './assets/logo.png'
+import cat from './assets/cat.png'
 
 export default {
   name: 'App',
@@ -18,7 +19,7 @@ export default {
   mounted() {
     var canvas = new fabric.Canvas('c', {
       backgroundColor: 'rgb(100,100,200)',
-      backgroundImage: './assets/cat.png',
+      backgroundImage: cat,
       selectionColor: 'blue',
       selectionLineWidth: 2
     });
